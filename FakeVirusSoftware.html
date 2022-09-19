@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <div id="pageWrapper" class="preVirus"></div>
+    <h1 id="mainTitle" class="postVirus">Downloading Virus.</h1>
+    <h2 id="basicSoftP" class="miniPs postVirus">//Basic Software: 0%</h2>
+    <h2 id="rootkitP" class="miniPs postVirus">//Rootkit Insertion into Kernel: 0%</h2>
+    <h2 id="backdoorP" class="miniPs postVirus">//Backdoor: 0%</h2>
+    <h2 id="IPdisguiseP" class="miniPs postVirus">//Reverse_HTTP Mask: 0%</h2>
+    <h2 id="encryptionP" class="miniPs postVirus">//COnverting Payload to Trojan: 0%</h2>
+    <h2 id="macroExtensionP" class="miniPs postVirus">//Macro Extension: 0%</h2>
+    <h2 id="computerInfoP" class="miniPs postVirus">//Computer Information Upload: 0%</h2>
+    <div id="codeContainer postVirus">
+    <p id="codeP" class="postVirus"></p>
+    </div>
+    <h2 id="computerCredential" class="credentialPs postVirus"></h2>
+    <h2 id="IPCredential" class="credentialPs postVirus"></h2>
+    <h3 id="redirectP" class="preVirus">Redirecting to https://google.com ...</h3>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.g8igT3CQv-0FN5DUlIjkMwHaEb%26pid%3DApi&f=1", id="img404" class="preVirus"/>
+<style>
+    img {
+        z-index: 20;
+        position: absolute;
+        left: 20%;
+        top: 10%;
+        width: 800px;
+        height: 600px;
+    }
+    body {
+        background-color: black;
+    }
+    #pageWrapper {
+        position: absolute;
+        background-color: white;
+        z-index: -1;
+    }
+    #computerCredential {
+        z-index: -2;
+        position: absolute;
+        left: 0%;
+        top: 40%;
+        color: forestgreen;
+    }
+    #IPCredential {
+        z-index: -2;
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        color: forestgreen;
+    }
+#redirectP {
+    color: blue;
+    z-index: 20;
+}
+#mainTitle {
+    z-index: -2;
+    position: absolute;
+    font-size: 40px;
+    top: 0%;
+    color: forestgreen;
+}
+.miniPs {
+    z-index: -2;
+    position: absolute;
+    left: 1%;
+    color: forestgreen;
+}
+    
+.credentialPs {
+    z-index: -2;
+    color: forestgreen;
+    margin-top: 200px;
+}
+    
+#basicSoftP {top: 5%; z-index: -2;}
+#rootkitP {top: 9%; z-index: -2;}
+#backdoorP {top: 13%; z-index: -2;}
+#IPdisguiseP {top: 17%; z-index: -2;}
+#encryptionP {top: 21%; z-index: -2;}
+#macroExtensionP {top: 25%; z-index: -2;}
+#computerInfoP {top: 29%; z-index: -2;}
+    
+#codeContainer {
+    position: absolute;
+    left: 75%;
+    top: 4%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: forestgreen;
+     z-index: -2;
+}
+#codeP {
+    color: forestgreen;
+    position: absolute;
+    top: 4%;
+    left: 75%;
+     z-index: -2;
+}
+</style>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+function Random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    
+const fullHackText = "MASKING PUPs/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n echo('Hack Successful');";
+
+const alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+let titleCounter = 1;
+let counter = 0;
+let currentVText = 0;
+let lettersFilled = 0;
+let lettersFilled2 = 0;
+    
+$(document).ready(function() {
+    $('#mainTitle').css('left', (($(document).width()/2)-($('#mainTitle').width()/2)).toString()+'px');
+    $("#pageWrapper").css("width", $(document).width()+"px");
+    $("#pageWrapper").css("height", $(document).height()+"px");
+    $("#pageWrapper").css("position", "absolute");
+    $("#pageWrapper").css("left", "0px");
+    $("#pageWrapper").css("top", "0px");
+    
+});
+    
+function flicker() {
+    setTimeout(function() {
+        $(".preVirus").hide();
+        $(".postVirus").show();
+        setTimeout(function() {
+            $(".preVirus").show();
+            $(".postVirus").hide();
+            flicker();
+        }, Random(75, 250));
+    }, Random(1000, 3000));
+}
+    
+setInterval(function() {
+    switch(titleCounter) {
+        case 0: 
+            $('#mainTitle').html('Downloading Virus.');
+            $('#redirectP').html('Redirecting to https://google.com.');
+            titleCounter = titleCounter + 1;
+        break;
+        case 1:
+            $('#mainTitle').html('Downloading Virus..');
+            $('#redirectP').html('Redirecting to https://google.com..');
+            titleCounter = titleCounter + 1;
+        break;
+        case 2:
+            $('#mainTitle').html('Downloading Virus...');
+            $('#redirectP').html('Redirecting to https://google.com...');
+            titleCounter = titleCounter + 1;
+        break;
+        case 3:
+            $('#mainTitle').html('Downloading Virus');
+            $('#redirectP').html('Redirecting to https://google.com');
+            titleCounter = 0;
+        break;
+    }
+}, 300);
+
+function gameLoop() {
+    counter = counter + 1;
+    currentVText = currentVText + Random(11,  19);
+    $('#codeP').html(fullHackText.substring(0, currentVText));
+    switch(counter) {
+        case 1:
+            $('#basicSoftP').html('//Basic Software: 67%');
+            
+        break;
+        case 7:
+            $('#basicSoftP').html('//Basic Software: 83%');
+        break;
+        case 12:
+            $('#basicSoftP').html('//Basic Software: 100%');
+        break;
+        case 13:
+            $('#basicSoftP').html('//Basic Software: COMPLETE');
+            $('#rootkitP').html('//Rootkit Software: 11%');
+        break;
+        case 23:
+            $('#rootkitP').html('//Rootkit Software: 54%');
+        break;
+        case 30:
+            $('#rootkitP').html('//Rootkit Software: 98%');
+        break;
+        case 37:
+            $('#rootkitP').html('//Rootkit Software: COMPLETE');
+            $('#backdoorP').html('//Backdoor: 9%');
+        break;
+        case 44:
+            $('#backdoorP').html('//Backdoor: 79%');
+        break;
+        case 51:
+            $('#backdoorP').html('//Backdoor: 100%');
+        break;
+        case 58:
+            $('#backdoorP').html('//Backdoor: COMPLETE');
+            $('#IPdisguiseP').html('//IP Masking: 33%');
+        break;
+        case 65:
+            $('#IPdisguiseP').html('//IP Masking: 50%');
+        break;
+        case 72:
+            $('#IPdisguiseP').html('//IP Masking: 100%');
+        break;
+        case 79:
+            $('#IPdisguiseP').html('//IP Masking: COMPLETE');
+            $('#encryptionP').html('//Virus Encryption: 1%');
+        break;
+        case 86:
+            $('#encryptionP').html('//Virus Encryption: 45%');
+        break;
+        case 93:
+            $('#encryptionP').html('//Virus Encryption: 87%');
+        break;
+        case 100:
+            $('#encryptionP').html('//Virus Encryption: 100%');
+        break;
+        case 107:
+            $('#encryptionP').html('//Virus Encryption: COMPLETE');
+            $('#macroExtensionP').html('//Macro Extension: 69%');
+        break;
+        case 114:
+            $('#macroExtensionP').html('//Macro Extension: 100%');
+        break;
+        case 121:
+            $('#macroExtensionP').html('//Macro Extension: COMPLETE');
+            $('#computerInfoP').html('//Computer Information Upload: 4%');
+        break;
+        case 128:
+            $('#computerInfoP').html('//Computer Information Upload: 16%');
+        break;
+        case 135:
+            $('#computerInfoP').html('//Computer Information Upload: 27%');
+        break;
+        case 142:
+            $('#computerInfoP').html('//Computer Information Upload: 35%');
+        break;
+        case 149:
+            $('#computerInfoP').html('//Computer Information Upload: 51%');
+        break;
+        case 156:
+            $('#computerInfoP').html('//Computer Information Upload: 70%');
+        break;
+        case 163:
+            $('#computerInfoP').html('//Computer Information Upload: 83%');
+        break;
+        case 170:
+            $('#computerInfoP').html('//Computer Information Upload: 89%');
+        break;
+        case 177:
+            $('#computerInfoP').html('//Computer Information Upload: 99%');
+        break;
+        case 184:
+            $('#computerInfoP').html('//Computer Information Upload: 100%');
+        break;
+        case 191:
+            $('#computerInfoP').html('//Computer Information Upload: COMPLETE');
+        break;
+    };
+    
+    if (lettersFilled != 35) {
+        lettersFilled = lettersFilled + 1;
+    }
+    if (lettersFilled2 != 24) {
+        lettersFilled2 = lettersFilled2 + 1;
+    }
+    
+    if (lettersFilled < 5) {
+        $('#computerCredential').html('computer: '+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled < 10) {
+        $('#computerCredential').html('computer: M'+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled < 15) {
+        $('#computerCredential').html('computer: MA'+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled < 20) {
+        $('#computerCredential').html('computer: MAC'+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled < 25) {
+        $('#computerCredential').html('computer: MACB'+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled < 30) {
+        $('#computerCredential').html('computer: MACBO'+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled < 35) {
+        $('#computerCredential').html('computer: MACBOO'+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled === 35) {
+        $('#computerCredential').html('computer: MACBOOK');
+    }
+    
+    if (lettersFilled2 < 6) {
+        $('#IPCredential').html('IP address: '+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled2 < 12) {
+        $('#IPCredential').html('IP address: 189.'+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled2 < 18) {
+        $('#IPCredential').html('IP address: 189.182'+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled2 < 24) {
+        $('#IPCredential').html('IP address: 189.182.221'+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]+alphabet[Random(0, alphabet.length-1)]);
+    } else if (lettersFilled2 === 24) {
+        $('#IPCredential').html('IP address: 189.182.221.171');
+    }
+    setTimeout(function() {
+        gameLoop();
+    }, 100);
+}
+ 
+setTimeout(function() {
+    $('.postVirus').hide();
+}, 10);
+setTimeout(function() {
+    window.open('https://flightplandatabase.com');
+}, 1000);
+
+setTimeout(function() {
+    gameLoop();
+    $('.postVirus').show();
+    flicker();
+}, 2500);
+//189.182.221.171
+</script>
+</html>
